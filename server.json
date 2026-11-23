@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Senpi-ai/senpi",
+  "title": "Senpi",
+  "description": "Senpi's Hyperliquid research: market pulse, signals, smart money, top traders and wallet analysis.",
+  "version": "0.5.1",
+  "websiteUrl": "https://senpi.ai/connectors",
+  "repository": {
+    "url": "https://github.com/Senpi-ai/senpi-mcp",
+    "source": "github",
+    "id": "1461930120"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/Senpi-ai/senpi-plugin/main/assets/senpi-logo.png",
+      "mimeType": "image/png",
+      "sizes": ["128x128"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.senpi.ai/mcp"
+    }
+  ]
+}
