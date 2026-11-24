@@ -1,6 +1,8 @@
 # Senpi — AI Quant: MCP server reference
 
-Setup, authentication, tool-by-tool inputs and classification, response format, errors and limits for Senpi's hosted MCP server. Generated from the server's tool registry as deployed in production.
+Senpi's hosted MCP server, `https://mcp.senpi.ai/mcp`, gives Claude, ChatGPT, Codex, Cursor, Grok, Hermes and any other MCP client Senpi's Hyperliquid research tools: market pulse, ranked signals, smart-money positioning, trader research, Quant Desk wallet analysis, the strategy catalog, and your own portfolio. Every tool requires signing in to Senpi (OAuth). The easiest way to add it is the [Senpi plugin](https://github.com/Senpi-ai/senpi-plugin).
+
+This page is the server's reference: setup, authentication, tool-by-tool inputs and classification, response format, errors and limits. Generated from the server's tool registry as deployed in production. Its entry for the [official MCP Registry](https://registry.modelcontextprotocol.io) is [server.json](server.json), named `io.github.Senpi-ai/senpi`.
 
 > **Read-only by construction: 22 tools, all Read. No Write tools. No Sensitive writes.**
 > No tool can place, change or cancel a trade order, deploy a strategy, move funds, or change settings. Every tool is registered with `readOnlyHint: true` and `destructiveHint: false`, and every response carries `meta.action_type: "read"`. Trading happens in the Senpi app at [senpi.ai](https://senpi.ai), never through this server.
@@ -382,3 +384,7 @@ Two to five Hyperliquid wallets side by side, each run through the Quant Desk ov
 ---
 
 *Informational only, not financial advice. © Senpi Inc.*
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE).
